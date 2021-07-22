@@ -2,6 +2,7 @@ dependent_repositories:
   - name: kogito-runtimes
   - name: kogito-apps
   - name: optaplanner
+  - name: optaplanner-quickstarts
   - name: kogito-examples
   - name: kogito-images
   - name: kogito-operator
