@@ -52,7 +52,7 @@ pipeline {
         IMAGE_NAME_NIGHTLY_SUFFIX = 'nightly'
 
         TEMP_TAG = "temp-${getBuildBranch()}-tests"
-        // Use branch name in nightly tag as we may have parallel master and release branch builds
+        // Use branch name in nightly tag as we may have parallel main and release branch builds
         NIGHTLY_TAG = """${getBuildBranch()}-${sh(
                 returnStdout: true,
                 script: 'date -u "+%Y-%m-%d"'
@@ -114,7 +114,7 @@ pipeline {
                     def buildParams = getDefaultBuildParams(optaplannerBranch)
                     addSkipTestsParam(buildParams)
                     addSkipIntegrationTestsParam(buildParams)
-                    def quickstartsBranch = optaplannerBranch == 'master' ? 'development' : optaplannerBranch
+                    def quickstartsBranch = optaplannerBranch == 'main' ? 'development' : optaplannerBranch
                     addStringParam(buildParams, 'QUICKSTARTS_BUILD_BRANCH_NAME', quickstartsBranch)
 
                     buildJob(OPTAPLANNER_DEPLOY, buildParams, false)
@@ -409,6 +409,7 @@ List getDefaultBuildParams(String buildBranchName = '') {
     buildBranchName = buildBranchName ?: getBuildBranch()
     List params = []
     addStringParam(params, 'DISPLAY_NAME', env.NIGHTLY_TAG)
+    addBooleanParam(params, 'SEND_NOTIFICATION', true)
 
     return params
 }

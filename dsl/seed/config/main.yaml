@@ -1,8 +1,7 @@
 git:
   branches:
-  - master
-  - 1.5.x
-  - 1.8.x
+  - main
   - 1.9.x
+  - 1.10.x
   main_branch:
-    default: master
+    default: main
