@@ -242,6 +242,7 @@ class KogitoJobTemplate {
     *     commitContext => 'LTS' commit context
     *   env:
     *     QUARKUS_BRANCH => LTS quarkus branch
+    *     LTS => true
     **/
     static def createQuarkusLTSPRJob(def script, Map jobParams = [:]) {
         def quarkusLtsVersion = Utils.getQuarkusLTSVersion(script)
@@ -258,6 +259,7 @@ class KogitoJobTemplate {
 
         jobParams.env = jobParams.env ?: [:]
         jobParams.env.put('QUARKUS_BRANCH', quarkusLtsVersion)
+        jobParams.env.put('LTS', true)
 
         return createPRJob(script, jobParams)
     }
@@ -414,7 +416,10 @@ class KogitoJobTemplate {
     */
     static def createMultijobLTSPRJobs(def script, Map multijobConfig, Closure defaultParamsGetter) {
         multijobConfig.testType = 'LTS'
-        multijobConfig.extraEnv = [ QUARKUS_BRANCH: Utils.getQuarkusLTSVersion(script) ]
+        multijobConfig.extraEnv = [ 
+            QUARKUS_BRANCH: Utils.getQuarkusLTSVersion(script),
+            LTS: true
+        ]
         multijobConfig.optional = true
         multijobConfig.primaryTriggerPhrase = KogitoConstants.KOGITO_LTS_PR_TRIGGER_PHRASE
         createMultijobPRJobs(script, multijobConfig, defaultParamsGetter)
