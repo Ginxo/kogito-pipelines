@@ -359,7 +359,7 @@ class KogitoJobTemplate {
                 jobParams.git.repository = KogitoConstants.BUILDCHAIN_REPOSITORY
                 jobParams.jenkinsfile = KogitoConstants.BUILDCHAIN_JENKINSFILE_PATH
                 if (jobCfg.repository) {
-                    jobParams.env.put('BUILDCHAIN_PROJECT', jobCfg.repository)
+                    jobParams.env.put('BUILDCHAIN_PROJECT', "${jobParams.git.author}/${jobCfg.repository}")
                 }
                 jobParams.env.put('BUILDCHAIN_PR_TYPE', 'pr')
             }
