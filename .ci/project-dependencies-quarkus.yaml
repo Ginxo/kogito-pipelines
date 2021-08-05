@@ -9,3 +9,12 @@ dependencies:
         default:
           - source: .*
             target: 1.11
+
+  - project: radtriste/kogito-runtimes
+    dependencies:
+      - project: quarkusio/quarkus
+
+ - project: radtriste/optaplanner
+    dependencies:
+      - project: radtriste/kogito-runtimes
+      - project: quarkusio/quarkus
