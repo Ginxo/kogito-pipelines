@@ -10,11 +10,11 @@ dependencies:
           - source: .*
             target: 1.11
 
-  - project: radtriste/kogito-runtimes
+  - project: kiegroup/kogito-runtimes
     dependencies:
       - project: quarkusio/quarkus
 
- - project: radtriste/optaplanner
+  - project: kiegroup/optaplanner
     dependencies:
-      - project: radtriste/kogito-runtimes
+      - project: kiegroup/kogito-runtimes
       - project: quarkusio/quarkus
