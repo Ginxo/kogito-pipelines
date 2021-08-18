@@ -13,7 +13,9 @@ repositories:
   - name: kogito-runtimes
   - name: kogito-apps
   - name: optaplanner
+    jenkins_config_path: .ci/jenkins
   - name: optaplanner-quickstarts
+    branch: development
     jenkins_config_path: .ci/jenkins
   - name: kogito-examples
   - name: kogito-images
