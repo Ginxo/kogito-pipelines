@@ -14,6 +14,10 @@ repositories:
   - name: kogito-apps
   - name: optaplanner
     jenkins_config_path: .ci/jenkins
+  - name: optaweb-employee-rostering
+    jenkins_config_path: .ci/jenkins
+  - name: optaweb-vehicle-routing
+    jenkins_config_path: .ci/jenkins
   - name: optaplanner-quickstarts
     branch: development
     jenkins_config_path: .ci/jenkins
