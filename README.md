@@ -4,6 +4,7 @@ This repository contains some of the pipelines of Kogito project.
 
 * [Kogito Pipelines](#kogito-pipelines)
 * [Kogito Repositories](#kogito-repositories)
+* [Kogito CI Status](#kogito-ci-status)
 * [The different Kogito pipelines](#the-different-kogito-pipelines)
   * [Nightly & Release pipelines](#nightly--release-pipelines)
   * [Tools pipelines](#tools-pipelines)
@@ -35,6 +36,10 @@ Apart from this repository, pipelines are also concerning those repositories:
 * [optaweb-employee-rostering](https://github.com/kiegroup/optaweb-employee-rostering)
 * [optaweb-vehicle-routing](https://github.com/kiegroup/optaweb-vehicle-routing)
 * [optaplanner-quickstarts](https://github.com/kiegroup/optaplanner-quickstarts)
+
+# Kogito CI Status
+
+You can check kogito organization repositories CI status from [Chain Status webpage](https://kiegroup.github.io/kogito-pipelines/)
 
 # The different Kogito pipelines
 
