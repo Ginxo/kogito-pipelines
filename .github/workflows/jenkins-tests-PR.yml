@@ -1,16 +1,16 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Jenkins Pipeline Tests
+name: Jenkins Tests
 
 on:
   pull_request:
     paths: 
-    - 'jenkins/**'
-    - 'Jenkinsfile.*'
+    - '.ci/jenkins/**'
+    - 'dsl/**'
 
 jobs:
-  build:
+  jenkinsfile-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,8 +30,23 @@ jobs:
       with:
         java-version: 1.8
 
-    - name: Install shared libraries
-      run: cd $GITHUB_WORKSPACE/shared-libs && mvn -B clean install -DskipTests
-      
+    - name: Setup pipeline env
+      run: cd $GITHUB_WORKSPACE/main/.ci/jenkins/tests && ./setup_pipeline_env.sh
+
     - name: Test pipelines
-      run: cd $GITHUB_WORKSPACE/main/jenkins/tests && mvn -B clean test
+      run: cd $GITHUB_WORKSPACE/main/.ci/jenkins/tests && mvn -B clean test
+
+  dsl-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout 
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 1.11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+      
+    - name: Test DSL
+      run: cd .ci/jenkins/dsl && ./test.sh
