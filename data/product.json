@@ -7,5 +7,13 @@
       "order": 1000,
       "date": 1648450698671
     }
+  ],
+  "projectStatuses": [
+    {
+      "id": "kogito-pull-request-status",
+      "name": "Kogito Pull Request Status",
+      "folder": "kogito-pull-request-status",
+      "date": 1648451589446
+    }
   ]
 }
