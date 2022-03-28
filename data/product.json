@@ -20,6 +20,12 @@
       "name": "Optaplanner Pull Request Status",
       "folder": "optaplanner-pull-request-status",
       "date": 1648452908147
+    },
+    {
+      "id": "drools-pull-request-status",
+      "name": "Drools Pull Request Status",
+      "folder": "drools-pull-request-status",
+      "date": 1648452910732
     }
   ]
 }
