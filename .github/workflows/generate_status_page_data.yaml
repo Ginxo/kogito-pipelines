@@ -20,7 +20,7 @@ jobs:
         uses: kiegroup/chain-status/.ci/actions/generate-data@main
         with:
           definition-file: https://raw.githubusercontent.com/kiegroup/kogito-pipelines/main/.ci/pull-request-config.yaml
-          title: Kogito Pull Request Status
+          title: Kogito
           subtitle: Kogito organization repositories CI Status
           base-branch-filter: main,^1\.*\.x$
           project-filter: kiegroup/kogito.*$
@@ -31,7 +31,7 @@ jobs:
         uses: kiegroup/chain-status/.ci/actions/generate-data@main
         with:
           definition-file: https://raw.githubusercontent.com/kiegroup/kogito-pipelines/main/.ci/pull-request-config.yaml
-          title: Optaplanner Pull Request Status
+          title: Optaplanner
           subtitle: Kogito organization repositories CI Status
           base-branch-filter: main,^8\.*\.x$
           project-filter: kiegroup/opta.*$
@@ -42,7 +42,7 @@ jobs:
         uses: kiegroup/chain-status/.ci/actions/generate-data@main
         with:
           definition-file: https://raw.githubusercontent.com/kiegroup/kogito-pipelines/main/.ci/pull-request-config.yaml
-          title: Drools Pull Request Status
+          title: Drools
           subtitle: Kogito organization repositories CI Status
           base-branch-filter: main,^8\.*\.x$
           project-filter: kiegroup/drools.*$
