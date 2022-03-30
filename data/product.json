@@ -26,6 +26,12 @@
       "name": "Drools Pull Request Status",
       "folder": "drools-pull-request-status",
       "date": 1648632260356
+    },
+    {
+      "id": "kogito",
+      "name": "Kogito",
+      "folder": "kogito",
+      "date": 1648634420607
     }
   ]
 }
