@@ -38,6 +38,12 @@
       "name": "Optaplanner",
       "folder": "optaplanner",
       "date": 1648634423667
+    },
+    {
+      "id": "drools",
+      "name": "Drools",
+      "folder": "drools",
+      "date": 1648634428809
     }
   ]
 }
