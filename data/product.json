@@ -8,12 +8,12 @@
       "date": 1648558709358
     }
   ],
-  "projectStatuses": [    
+  "projectStatuses": [
     {
       "id": "kogito",
       "name": "Kogito",
       "folder": "kogito",
-      "date": 1648634420607
+      "date": 1648635765864
     },
     {
       "id": "optaplanner",
