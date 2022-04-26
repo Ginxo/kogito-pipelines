@@ -2,8 +2,7 @@ name: Generate status page data
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 * * * *'
+
 jobs:
   generate-status-page-data:
     concurrency:
